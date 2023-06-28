@@ -1,0 +1,78 @@
+{% include 'font.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    .card {
+        max-width: 300px;
+        min-height: 460px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        max-width: 500px;
+        height: 300px;
+        padding: 35px;
+        border: 1px solid rgba(255, 255, 255, .25);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+        backdrop-filter: blur(15px);
+    }
+    body {
+		font: 1em/1.618 Inter, sans-serif;
+		background:
+			url(https://u7.uidownload.com/vector/331/515/vector-blue-and-white-swirling-background-texture-.jpg) center / cover no-repeat fixed;
+	} 
+</style>
+
+<body>
+    {% include 'menus.html' %}
+    <form action="{{ url_for('edit') }}" method="post">
+        {% if mesage is defined and mesage %}
+        <div class="alert alert-warning">{{ mesage }}</div>
+        {% endif %}
+    <br><br><br><br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="d-flex justify-content-center h-100">
+                <div class="article-card">
+                    <div class="card">
+                        <h2 class="mt-4">แก้ไขข้อมูล</h2>
+                        <div class="form-group">
+                            <label for="name">ชื่อ-นามสกุล :</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{ editUser.name }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="role">สถานะ :</label>
+                            <select class="form-control" id="role" name="role">
+                                <option value="admin" {% if editUser.role=='admin' %}selected{% endif %}>Admin</option>
+                                <option value="user" {% if editUser.role=='user' %}selected{% endif %}>User</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">ประเทศ :</label>
+                            <input type="text" class="form-control" id="country" name="country"
+                                value="{{ editUser.country }}">
+                        </div>
+
+                        <input type="hidden" id="userid" name="userid" value="{{ editUser.userid }}">
+                        <button type="submit" class="btn btn-primary">บันทึก</button>
+                        <input type="button" class="btn btn-success" onclick="history.back()" value="ย้อนกลับ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

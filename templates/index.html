@@ -1,0 +1,106 @@
+{% include 'font.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Job Data Acquisition And Analysis System  </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+
+<script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+  {% include 'menu_user.html' %}
+  <br>
+  <h3 class="heading" align="center">
+    Job Data Acquisition And Analysis System  
+</h3>
+<br>
+<div class="container">
+
+  <form action="/">
+    <div class="row">
+      <div class="col"><input name="input_date" id="datepicker"></div>
+      <div class="col"><input class="btn btn-success" type="submit" value="Submit"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+  </form>
+  
+
+  <script>
+      $('#datepicker').datepicker({
+          uiLibrary: 'bootstrap4'
+      });
+  </script>
+
+<table class="table table-bordered" id="sortTable">
+<thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>ภูมิภาคที่เปิดรับ (%)</th>
+    <th></th>
+    <th></th>
+  </tr>
+    <tr>
+        <th>ประเภทงาน</th>
+        <th>ทักษะ / จำนวนงาน (งาน)</th>
+        <th>เงินเดือนเฉลี่ย (บาท)</th>
+        <th>ภาคเหนือ</th>
+        <th>ภาคใต้</th>
+        <th>ภาคตะวันออก</th>
+        <th>ภาคตะวันตก</th>
+        <th>ภาคกลาง</th>
+      </tr>
+</thead>
+<tbody>
+    {% for i in data %}
+    <tr>
+      <td>{{ i["job"] }}</td>
+      <td>
+        <table class="table table-bordered">
+        {% for c in i["keyword"] %}
+        <tr>
+          <td class="col-md-8">{{ c["keyword"] }}</td>
+          <td class="col-md-8">{{ c["frequency"] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      </td>
+      <td>{{ i["detail"]["salary"] | int  }}</td>
+      <td>{{ i["detail"]["north"] | int }}</td>
+      <td>{{ i["detail"]["south"] | int }}</td>
+      <td>{{ i["detail"]["east"] | int }}</td>
+      <td>{{ i["detail"]["western"] | int }}</td>
+      <td>{{ i["detail"]["central"] | int }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+<script>
+$(document).ready(function () {
+    $('#sortTable').DataTable({
+     "ordering": true,
+     "paging":   false,
+     "order": [[2, 'desc']],
+    });
+    $('.dataTables_length').addClass('bs-select');
+  });
+</script>
+</body>
+</html>
