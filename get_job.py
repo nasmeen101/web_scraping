@@ -57,6 +57,3 @@ def process_job(input_date):
     db.report.insert_one(report.copy())
     db.keyword.insert_one({"keyword": job[:]})
     return [report.copy(), {"keyword": job[:]}, job_setting[:]]
-
-
-############
