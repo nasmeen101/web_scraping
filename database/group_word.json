@@ -1,0 +1,337 @@
+[{
+  "_id": {
+    "$oid": "648d26716057782f38339454"
+  },
+  "job": "Programer",
+  "keyword": [
+    "จาวา",
+    "java",
+    ".net",
+    "python",
+    "api",
+    "c",
+    "c++",
+    "c#",
+    "MVC",
+    ".NET",
+    "NET",
+    "asp",
+    "JavaScript",
+    "จาวาสคริปต์",
+    "HTML",
+    "CSS",
+    "PHP",
+    "Angular",
+    "Bootstap",
+    "jQuery",
+    "React",
+    "รีแอค",
+    "Flutter",
+    "ฟลัตเตอร์"
+  ],
+  "group": [
+    {
+      "java": [
+        "java",
+        "จาวา"
+      ]
+    },
+    {
+      "c/c++/c#": [
+        "c",
+        "c++",
+        "c#"
+      ]
+    },
+    {
+      ".net": [
+        ".net"
+      ]
+    },
+    {
+      "python": [
+        "python"
+      ]
+    },
+    {
+      "api": [
+        "api"
+      ]
+    },
+    {
+      "MVC": [
+        "MVC"
+      ]
+    },
+    {
+      ".Net": [
+        ".NET",
+        "NET"
+      ]
+    },
+    {
+      "ASP": [
+        "ASP"
+      ]
+    },
+    {
+      "JavaScript": [
+        "JavaScript",
+        "จาวาสคริปต์"
+      ]
+    },
+    {
+      "HTML": [
+        "HTML"
+      ]
+    },
+    {
+      "CSS": [
+        "CSS"
+      ]
+    },
+    {
+      "PHP": [
+        "PHP"
+      ]
+    },
+    {
+      "Angular": [
+        "Angular"
+      ]
+    },
+    {
+      "Bootstap": [
+        "Bootstap"
+      ]
+    },
+    {
+      "jQuery": [
+        "jQuery"
+      ]
+    },
+    {
+      "React": [
+        "React",
+        "รีแอค"
+      ]
+    },
+    {
+      "Flutter": [
+        "Flutter",
+        "ฟลัตเตอร์"
+      ]
+    }
+  ],
+  "create_datetime": {
+    "$date": "2023-06-17T11:29:23.292Z"
+  }
+},{
+  "_id": {
+    "$oid": "648d26aa6057782f38339456"
+  },
+  "job": "Database Administrator",
+  "keyword": [
+    "oracle",
+    "sql",
+    "database",
+    "ดาต้าเบส"
+  ],
+  "group": [
+    {
+      "oracle": [
+        "oracle",
+        "sql"
+      ]
+    },
+    {
+      "database": [
+        "database",
+        "ดาต้าเบส"
+      ]
+    }
+  ],
+  "create_datetime": {
+    "$date": "2023-06-17T11:29:23.292Z"
+  }
+},{
+  "_id": {
+    "$oid": "648d27ac6057782f38339461"
+  },
+  "job": "Network Engineer",
+  "keyword": [
+    "network",
+    "tcp",
+    "ip",
+    "routing",
+    "cisco"
+  ],
+  "group": [
+    {
+      "network": [
+        "network"
+      ]
+    },
+    {
+      "tcp": [
+        "tcp"
+      ]
+    },
+    {
+      "ip": [
+        "ip"
+      ]
+    },
+    {
+      "routing": [
+        "routing"
+      ]
+    },
+    {
+      "cisco": [
+        "cisco"
+      ]
+    }
+  ],
+  "create_datetime": {
+    "$date": "2023-06-17T11:29:23.292Z"
+  }
+},{
+  "_id": {
+    "$oid": "648d26aa6057782f38339857"
+  },
+  "job": "Developer",
+  "keyword": [
+    ".NET",
+    "NET",
+    "database",
+    "ดาต้าเบส",
+    "NodeJS",
+    "JavaScript",
+    "จาวาสคริปต์",
+    "HTML",
+    "CSS",
+    "PHP",
+    "Angular",
+    "Bootstap",
+    "jQuery",
+    "React",
+    "รีแอค",
+    "Flutter",
+    "ฟลัตเตอร์",
+    "JAVA",
+    "จาวา"
+  ],
+  "group": [
+    {
+      "database": [
+        "database",
+        "ดาต้าเบส"
+      ]
+    },
+    {
+      ".Net": [
+        ".NET",
+        "NET"
+      ]
+    },
+    {
+      "NodeJS": [
+        "NodeJS"
+      ]
+    },
+    {
+      "JavaScript": [
+        "JavaScript",
+        "จาวาสคริปต์"
+      ]
+    },
+    {
+      "HTML": [
+        "HTML"
+      ]
+    },
+    {
+      "CSS": [
+        "CSS"
+      ]
+    },
+    {
+      "PHP": [
+        "PHP"
+      ]
+    },
+    {
+      "Angular": [
+        "Angular"
+      ]
+    },
+    {
+      "Bootstap": [
+        "Bootstap"
+      ]
+    },
+    {
+      "jQuery": [
+        "jQuery"
+      ]
+    },
+    {
+      "React": [
+        "React",
+        "รีแอค"
+      ]
+    },
+    {
+      "Flutter": [
+        "Flutter",
+        "ฟลัตเตอร์"
+      ]
+    },
+    {
+      "JAVA": [
+        "JAVA",
+        "จาวา"
+      ]
+    }
+  ],
+  "create_datetime": {
+    "$date": "2023-06-17T11:29:23.292Z"
+  }
+},{
+  "_id": {
+    "$oid": "687d27ac6057781f38339471"
+  },
+  "job": "IT Support",
+  "keyword": [
+    "network",
+    "Server",
+    "Windows",
+    "WIFI"
+  ],
+  "group": [
+    {
+      "network": [
+        "network"
+      ]
+    },
+    {
+      "Server": [
+        "Server"
+      ]
+    },
+    {
+      "Windows": [
+        "Windows"
+      ]
+    },
+    {
+      "WIFI": [
+        "WIFI"
+      ]
+    }
+  ],
+  "create_datetime": {
+    "$date": "2023-06-17T11:29:23.292Z"
+  }
+}]
